@@ -1,40 +1,52 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from "react-router-dom"
+import {BrowserRouter as Router, Link, NavLink} from "react-router-dom"
 import {Path} from "./Routes";
 import s from './header.module.css'
 import {Button} from "@mui/material";
-
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 export const Header = () => {
     const isSignIn = false
     return (
-        <Router>
-            <nav          className={s.item}>
+            <div className={s.item}>
                 {/*{*/}
                 {/*    isSignIn ? '' : <div className={s.item}> <Link to={Path.SignUp}> Sign Up </Link> </div>*/}
                 {/*}*/}
                 {
                     isSignIn ? '' :
                         <Button
-                            // className={s.item}
-                            type='submit'
-                            color='primary'
-                            variant='contained'
-                            // sx={{ mt: 3, mb: 2 }}
-                            // sx={{ ml: 35, pt: 2 }}
+                            startIcon={<AppRegistrationIcon/>}
+                            variant='contained' sx={{
+                            backgroundColor: 'rgba(27,56,205,0.78)',
+                            color: '#888',
+                            margin: 5,
+                        }}
                         >
-                            <Link to={Path.SignUp}> Sign Up </Link> </Button>
+                            <NavLink
+                                className={s.link}
+                                to={Path.SignUp}
+                                  // style="text-decoration: none"
+                            > Sign Up</NavLink> </Button>
                 }
                 {
                     isSignIn ? '' :
                         <Button
-                            // className={s.item}
-                            type='submit'
-                            color='primary'
-                            variant='contained'
+                            startIcon={<ArrowCircleDownIcon/>}
+                            variant='contained' sx={{
+                            backgroundColor: 'rgba(27,56,205,0.78)',
+                            color: '#888',
+                            margin: 5,
+                        }}
                         >
-                            <Link to={Path.SignIn}> Sign In </Link> </Button>
+                            <NavLink
+                                className={s.link}
+                                to={Path.SignIn}>
+                                Sign In
+                            </NavLink>
+                        </Button>
                 }
+
                 {/*{*/}
                 {/*    !isSignIn ? '' : <div className={s.item}> <Link to={Path.Profile}> Profile </Link> </div>*/}
                 {/*}*/}
@@ -46,7 +58,10 @@ export const Header = () => {
                 {/*}*/}
 
 
-            </nav>
-        </Router>
+                            {/*<NavLink to={Path.SignIn}>*/}
+                            {/*    Sign In*/}
+                            {/*</NavLink>*/}
+
+            </div>
     )
 }

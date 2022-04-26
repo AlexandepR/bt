@@ -19,7 +19,7 @@ export enum Path {
 
 export const RoutesAll = () => {
     return (
-        <Router>
+        // <Router>
             <Routes>
                 <Route path="/" element={''}/>
                 <Route path={Path.SignUp} element={<SignUp/>}/>
@@ -30,7 +30,7 @@ export const RoutesAll = () => {
                 <Route path={Path.ErrorPage} element={<ErrorPage />}/>
                 <Route path="*" element={<ErrorPage />}/>
             </Routes>
-        </Router>
+        // </Router>
     )
 
 }

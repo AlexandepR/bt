@@ -3,6 +3,7 @@ import './App.css';
 import {Header} from "./ui/Header";
 import {RoutesAll} from "./ui/Routes";
 import s from './App.module.css';
+import {BrowserRouter} from "react-router-dom";
 
 // import { createMuiTheme } from '@material-ui/core/styles';
 

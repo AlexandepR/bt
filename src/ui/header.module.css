@@ -1,5 +1,13 @@
 .item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: large;
+    font-weight: 600
 }
