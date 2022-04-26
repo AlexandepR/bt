@@ -1,36 +1,52 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
-import {SignUp} from "./SignUp/SignUp";
-import {SignIn} from "./SignIn/SignIn";
-import {Profile} from "./Profile/Profile";
-import {NewPass} from "./NewPass/newPass";
-import {ForgotPass} from "./ForgotPass/ForgotPass";
+import {BrowserRouter as Router, Link} from "react-router-dom"
+import {Path} from "./Routes";
+import s from './header.module.css'
+import {Button} from "@mui/material";
 
 
 export const Header = () => {
-    const isSignIn = true
+    const isSignIn = false
     return (
         <Router>
-                <nav>
-                    {
-                        isSignIn ? '' : <Link to='/signUp'> Sign Up </Link>
-                    }
-                    {
-                        isSignIn ? '' : <Link to='/signIn'> Sign In </Link>
-                    }
-                    {
-                        !isSignIn ? '' : <Link to='/profile'> Profile </Link>
-                    }
-                    {
-                        !isSignIn ? '' : <Link to='/newPass'> New Password </Link>
-                    }
-                    {
-                        !isSignIn ? '' : <Link to='/forgotPass'> Forgot Password </Link>
-                    }
+            <nav          className={s.item}>
+                {/*{*/}
+                {/*    isSignIn ? '' : <div className={s.item}> <Link to={Path.SignUp}> Sign Up </Link> </div>*/}
+                {/*}*/}
+                {
+                    isSignIn ? '' :
+                        <Button
+                            // className={s.item}
+                            type='submit'
+                            color='primary'
+                            variant='contained'
+                            // sx={{ mt: 3, mb: 2 }}
+                            // sx={{ ml: 35, pt: 2 }}
+                        >
+                            <Link to={Path.SignUp}> Sign Up </Link> </Button>
+                }
+                {
+                    isSignIn ? '' :
+                        <Button
+                            // className={s.item}
+                            type='submit'
+                            color='primary'
+                            variant='contained'
+                        >
+                            <Link to={Path.SignIn}> Sign In </Link> </Button>
+                }
+                {/*{*/}
+                {/*    !isSignIn ? '' : <div className={s.item}> <Link to={Path.Profile}> Profile </Link> </div>*/}
+                {/*}*/}
+                {/*{*/}
+                {/*    !isSignIn ? '' : <div className={s.item}> <Link to={Path.NewPass}> New Password </Link> </div>*/}
+                {/*}*/}
+                {/*{*/}
+                {/*    !isSignIn ? '' : <div className={s.item}> <Link to={Path.ForgotPass}> Forgot Password </Link> </div>*/}
+                {/*}*/}
 
 
-
-                </nav>
+            </nav>
         </Router>
     )
 }
