@@ -1,7 +1,7 @@
 // import React from 'react';
 //
 //
-// export const SignUp = () => {
+// export const Registration = () => {
 //     return  <div> SIGN UPPPP</div>
 // }
 
@@ -36,7 +36,7 @@ function Copyright(props: any) {
 
 const theme = createTheme();
 
-export const SignUp = () => {
+export const Registration = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);

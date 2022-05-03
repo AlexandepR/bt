@@ -11,7 +11,7 @@ export const Header = () => {
     return (
             <div className={s.item}>
                 {/*{*/}
-                {/*    isSignIn ? '' : <div className={s.item}> <Link to={Path.SignUp}> Sign Up </Link> </div>*/}
+                {/*    isSignIn ? '' : <div className={s.item}> <Link to={Path.Registration}> Sign Up </Link> </div>*/}
                 {/*}*/}
                 {
                     isSignIn ? '' :
@@ -41,7 +41,7 @@ export const Header = () => {
                         >
                             <NavLink
                                 className={s.link}
-                                to={Path.SignIn}>
+                                to={Path.LoginIn}>
                                 Sign In
                             </NavLink>
                         </Button>
@@ -58,7 +58,7 @@ export const Header = () => {
                 {/*}*/}
 
 
-                            {/*<NavLink to={Path.SignIn}>*/}
+                            {/*<NavLink to={Path.LoginIn}>*/}
                             {/*    Sign In*/}
                             {/*</NavLink>*/}
 
