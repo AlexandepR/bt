@@ -22,11 +22,11 @@ export const RoutesAll = () => {
         // <Router>
             <Routes>
                 <Route path="/" element={''}/>
-                <Route path={Path.SignUp} element={<SignUp/>}/>
-                <Route path={Path.SignIn} element={<SignIn/>}/>
-                <Route path={Path.Profile} element={<Profile/>}/>
-                <Route path={Path.NewPass} element={<NewPass/>}/>
-                <Route path={Path.ForgotPass} element={<ForgotPass/>}/>
+                <Route path={Path.SignUp} element={<SignUp />}/>
+                <Route path={Path.SignIn} element={<SignIn />}/>
+                <Route path={Path.Profile} element={<Profile />}/>
+                <Route path={Path.NewPass} element={<NewPass />}/>
+                <Route path={Path.ForgotPass} element={<ForgotPass />}/>
                 <Route path={Path.ErrorPage} element={<ErrorPage />}/>
                 <Route path="*" element={<ErrorPage />}/>
             </Routes>
