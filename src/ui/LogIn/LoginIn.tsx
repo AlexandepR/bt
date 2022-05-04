@@ -29,6 +29,7 @@ export const LoginIn = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <button type='submit' className={style.submitBtn}> Submit </button>
             </form>
         </div>
     )

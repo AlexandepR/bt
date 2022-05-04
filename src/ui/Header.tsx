@@ -9,7 +9,7 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 export const Header = () => {
     const isSignIn = false
     return (
-            <div className={s.item}>
+            <div className={s.header}>
                 {/*{*/}
                 {/*    isSignIn ? '' : <div className={s.item}> <Link to={Path.Registration}> Sign Up </Link> </div>*/}
                 {/*}*/}
@@ -20,11 +20,11 @@ export const Header = () => {
                             variant='contained' sx={{
                             backgroundColor: 'rgba(27,56,205,0.78)',
                             color: '#888',
-                            margin: 5,
+                            margin: 3,
                         }}
                         >
                             <NavLink
-                                className={s.link}
+                                className={s.btn}
                                 to={Path.SignUp}
                                   // style="text-decoration: none"
                             > Sign Up</NavLink> </Button>
@@ -36,11 +36,11 @@ export const Header = () => {
                             variant='contained' sx={{
                             backgroundColor: 'rgba(27,56,205,0.78)',
                             color: '#888',
-                            margin: 5,
+                            margin: 3,
                         }}
                         >
                             <NavLink
-                                className={s.link}
+                                className={s.btn}
                                 to={Path.LoginIn}>
                                 Sign In
                             </NavLink>

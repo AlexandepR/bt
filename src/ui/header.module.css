@@ -1,11 +1,10 @@
-.item {
+.header {
+    height: 13vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-;
 }
-
-.link {
+.btn {
     text-decoration: none;
     color: #ffffff;
     font-size: large;
