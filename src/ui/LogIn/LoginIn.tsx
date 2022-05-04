@@ -1,27 +1,38 @@
-import React from 'react';
-
-
+import React, {useState} from 'react';
+import style from './LoginIn.module.css'
 
 export const LoginIn = () => {
     // const dispatch = useDispatch()
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
-    <div className='s.login'>
-        <form className='login_form'>
-            <h1> Login Here </h1>
-            <input type='name'/>
-        </form>
-    </div>
+        <div className={style.login}>
+            <form className={style.loginForm}>
+                <h1> Login Here </h1>
+                <input
+                    type='name'
+                    placeholder='Name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                    type='email'
+                    placeholder='Email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    type='password'
+                    placeholder='Password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </form>
+        </div>
     )
 }
-
-
-
-
-
-
-
-
 
 
 // import * as React from 'react';
