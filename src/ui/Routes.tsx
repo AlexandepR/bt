@@ -8,7 +8,7 @@ import {ForgotPass} from "./ForgotPass/ForgotPass";
 import {ErrorPage} from "./ErrorPage/ErrorPage";
 
 export enum Path {
-    SignUp = '/signUp',
+    Registration = '/signUp',
     LoginIn = "/loginIn",
     Profile = "/profile",
     NewPass = "/newPass",
@@ -22,7 +22,7 @@ export const RoutesAll = () => {
         // <Router>
             <Routes>
                 <Route path="/" element={''}/>
-                <Route path={Path.SignUp} element={<Registration />}/>
+                <Route path={Path.Registration} element={<Registration />}/>
                 <Route path={Path.LoginIn} element={<LoginIn />}/>
                 <Route path={Path.Profile} element={<Profile />}/>
                 <Route path={Path.NewPass} element={<NewPass />}/>

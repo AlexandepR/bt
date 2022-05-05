@@ -5,9 +5,11 @@ import s from './header.module.css'
 import {Button} from "@mui/material";
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import {useSelector} from "react-redux";
+import {AppRootStoreType} from "../bll/store";
 
 export const Header = () => {
-    const isSignIn = false
+    const isLoginIn = useSelector<AppRootStoreType, boolean>(state => state.logIn.isLoginIn)
     return (
             <div className={s.header}>
                 {/*{*/}
@@ -25,7 +27,7 @@ export const Header = () => {
                         >
                             <NavLink
                                 className={s.btn}
-                                to={Path.SignUp}
+                                to={Path.Registration}
                                   // style="text-decoration: none"
                             > Sign Up</NavLink> </Button>
                 }

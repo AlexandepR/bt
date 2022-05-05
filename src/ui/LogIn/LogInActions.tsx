@@ -2,8 +2,8 @@ import {Dispatch} from 'redux';
 import {LoginResponseType} from "./LogInTypes";
 
 
-export const setIsLoginAC = (value: boolean) =>
-    ({type: 'APP/SET-LOGIN-IN', value} as const)
+export const setIsLoginAC = (isLoggedIn: boolean) =>
+    ({type: 'APP/SET-LOGIN-IN', isLoggedIn} as const)
 export const setInitializedAC = (isInitialized: boolean) =>
     ({type: 'APP/SET-INITIALIZED', isInitialized} as const)
 export const setProfileAC = (profile: LoginResponseType) =>

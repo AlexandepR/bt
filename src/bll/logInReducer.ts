@@ -10,7 +10,7 @@ export const initState = {
 export const logInReducer = (state: InitStateType = initState, action: ActionType): InitStateType => {
     switch (action.type) {
         case 'APP/SET-LOGIN-IN' :
-            return {...state, isLoginIn: action.value}
+            return {...state, isLoginIn: action.isLoggedIn}
         case 'APP/SET-INITIALIZED':
             return {...state, isInitialized: action.isInitialized}
         case 'LOGIN/SET-USER-PROFILE':
