@@ -2,15 +2,16 @@ import thunk from "redux-thunk"
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import {logInReducer} from "./logInReducer";
 
-export type RootStateType = ReturnType<typeof rootReducer>;
+
 
 const rootReducer = combineReducers ({
-    logIn: logInReducer,
+    logIn: logInReducer
 })
+export type RootStateType = ReturnType<typeof rootReducer>;
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export type AppRootStoreType = ReturnType<typeof rootReducer>
+// export type AppRootStoreType = ReturnType<typeof rootReducer>
 
 // @ts-ignore
 window.store = store

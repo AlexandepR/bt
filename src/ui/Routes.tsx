@@ -8,7 +8,7 @@ import {ForgotPass} from "./ForgotPass/ForgotPass";
 import {ErrorPage} from "./ErrorPage/ErrorPage";
 
 export enum Path {
-    Registration = '/signUp',
+    Registration = '/Registration',
     LoginIn = "/loginIn",
     Profile = "/profile",
     NewPass = "/newPass",
