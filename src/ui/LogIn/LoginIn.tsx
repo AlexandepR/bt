@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import style from './LoginIn.module.css'
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStoreType} from "../../bll/store";
 
 export const LoginIn = () => {
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
+    const isLoginIn = useSelector<AppRootStoreType, boolean>( state => state.logIn.isLoginIn)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -29,7 +32,10 @@ export const LoginIn = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type='submit' className={style.submitBtn}> Submit </button>
+                <button
+                    type='submit'
+                    className={style.submitBtn}
+                > Submit </button>
             </form>
         </div>
     )
