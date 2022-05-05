@@ -1,6 +1,6 @@
 import React from "react";
 import {initState} from "../../bll/logInReducer";
-import {setIsLoginAC} from "./LogInActions";
+import {fetchLogErrorAC, setInitializedAC, setIsLoginAC, setProfileAC} from "./LogInActions";
 
 export type InitStateType = typeof initState
 
@@ -39,4 +39,7 @@ export interface IUser {
 }
 
 export type ActionType =
-    ReturnType<typeof setIsLoginAC>
+    ReturnType<typeof setIsLoginAC> |
+    ReturnType<typeof setInitializedAC> |
+    ReturnType<typeof setProfileAC> |
+    ReturnType<typeof fetchLogErrorAC>
