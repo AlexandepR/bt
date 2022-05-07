@@ -13,11 +13,11 @@ export const Header = () => {
     const isLoginIn = false
     return (
         <div className={s.header}>
-            {/*{*/}
-            {/*    isLoginIn ? '' :*/}
-            {/*        <div className={s.btn}>*/}
-            {/*            <Link to={Path.Registration}> Sign Up </Link></div>*/}
-            {/*}*/}
+            {
+                isLoginIn ? '' :
+                    <div className={s.btn}>
+                        <Link to={Path.Registration}> Sign Up </Link></div>
+            }
             {
                 isLoginIn ? '' :
                     <Button
