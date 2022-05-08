@@ -38,6 +38,13 @@ export interface IUser {
     id: string
 }
 
+export enum LoginActions {
+    SET_IS_LOGGED_IN = 'LOGIN/SET-IS-LOGGED-IN',
+    SET_IS_INITIALIZED = 'LOGIN/SET-IS-INITIALIZED',
+    SET_USER_PROFILE = 'LOGIN/SET_USER_PROFILE',
+    FETCH_LOG_ERROR = 'LOGIN/FETCH_LOG_ERROR',
+}
+
 export type ActionType =
     ReturnType<typeof setIsLoginAC> |
     ReturnType<typeof setInitializedAC> |
