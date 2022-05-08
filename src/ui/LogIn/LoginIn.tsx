@@ -13,6 +13,19 @@ export const LoginIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    useEffect(() => {
+        if (error) {
+            onErrorNotification()
+            dispatch(fetchLogError(error))
+        }
+    }, [error])
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate('/profile')
+        }
+    }, [isLoggedIn])
+
     return (
         <div className={style.login}>
             <form className={style.loginForm}>
