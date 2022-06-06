@@ -5,10 +5,10 @@ import {RootStateType} from "../../bll/store";
 import { useNavigate } from 'react-router-dom';
 
 export const LoginIn = () => {
-    // const dispatch = useDispatch()
-    // const isLoginIn = useSelector<RootStateType, boolean>( state => state.logIn.isLoginIn)
-    // const error = useSelector<RootStateType, string>(state => state.logIn.error)
-    // const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const isLoginIn = useSelector<RootStateType, boolean>( state => state.logIn.isLoginIn)
+    const error = useSelector<RootStateType, string>(state => state.logIn.error)
+    const navigate = useNavigate()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
